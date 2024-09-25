@@ -5,12 +5,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
-
-import ej.blocs.Type;
 
 public class AnalyticsCounter {
-
 	private ISymptomReader ISymptomReader;
 	private ISymptomWriter ISymptomWriter;
 
@@ -44,5 +40,4 @@ public class AnalyticsCounter {
 	public Map<String, Integer> sortSymptoms(Map<String, Integer> symptoms) {
 		return symptoms;
 	}
-	
 }
