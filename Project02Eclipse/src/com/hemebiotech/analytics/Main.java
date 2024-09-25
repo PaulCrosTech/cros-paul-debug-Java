@@ -22,15 +22,15 @@ public class Main {
 		ISymptomWriter writer = new WriteSymptomDataToFile();
 		AnalyticsCounter analyticsCounter  = new AnalyticsCounter(reader, writer);
 		
-		List<String> symptomesListe = analyticsCounter.getSymptoms();
-		if(symptomesListe.isEmpty())
+		List<String> symptomsList = analyticsCounter.getSymptoms();
+		if(symptomsList.isEmpty())
 		{
 			System.out.println("Le fichier " + pathToFile + " ne contient aucun symptômes.");
 			System.exit(0);
 		}
 		
-		Map<String, Integer> symptomesQuantite = analyticsCounter.countSymptoms(symptomesListe);
+		Map<String, Integer> symptomsQuantity = analyticsCounter.countSymptoms(symptomsList);
 		
-		analyticsCounter.writeSymptoms(symptomesQuantite);
+		analyticsCounter.writeSymptoms(symptomsQuantity);
 	}
 }

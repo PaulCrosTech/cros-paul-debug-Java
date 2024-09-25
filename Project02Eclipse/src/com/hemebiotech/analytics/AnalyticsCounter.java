@@ -47,13 +47,13 @@ public class AnalyticsCounter {
 	 */
 	public Map<String, Integer> countSymptoms(List<String> symptoms)
 	{
-		Map<String, Integer> quantiteSymptom = new TreeMap<String, Integer>();
+		Map<String, Integer> quantitySymptom = new TreeMap<String, Integer>();
 		
 		symptoms.forEach((symptom) -> {
-			quantiteSymptom.merge(symptom, 1, Integer::sum);
+			quantitySymptom.merge(symptom, 1, Integer::sum);
 		});
 		
-		return quantiteSymptom;
+		return quantitySymptom;
 	}
 	
 	
