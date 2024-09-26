@@ -1,7 +1,9 @@
 package com.hemebiotech.analytics;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
@@ -47,7 +49,7 @@ public class AnalyticsCounter {
 	 */
 	public Map<String, Integer> countSymptoms(List<String> symptoms)
 	{
-		Map<String, Integer> quantitySymptom = new TreeMap<String, Integer>();
+		Map<String, Integer> quantitySymptom = new HashMap<String, Integer>();
 		
 		symptoms.forEach((symptom) -> {
 			quantitySymptom.merge(symptom, 1, Integer::sum);
@@ -58,11 +60,11 @@ public class AnalyticsCounter {
 	
 	
 	/**
-	 * Not useful, because we used TreeMap in countSymptoms
+	 * Sort symptoms in alphabetical order
 	 * @param symptoms
 	 * @return
 	 */
 	public Map<String, Integer> sortSymptoms(Map<String, Integer> symptoms) {
-		return symptoms;
+		return new TreeMap<>(symptoms);
 	}
 }

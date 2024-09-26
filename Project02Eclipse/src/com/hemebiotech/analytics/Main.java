@@ -31,6 +31,8 @@ public class Main {
 		
 		Map<String, Integer> symptomsQuantity = analyticsCounter.countSymptoms(symptomsList);
 		
+		symptomsQuantity = analyticsCounter.sortSymptoms(symptomsQuantity);
+		
 		analyticsCounter.writeSymptoms(symptomsQuantity);
 	}
 }
